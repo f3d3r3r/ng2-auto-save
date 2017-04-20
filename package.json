@@ -1,0 +1,57 @@
+{
+  "name": "ng2-auto-save",
+  "version": "0.0.1",
+  "description": "Angular 2 auto save component",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lnardai/ng2-auto-save.git"
+  },
+  "keywords": [
+    "angular2",
+    "auto-save"
+  ],
+  "author": "Laszlo Nardai",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/lnardai/ng2-auto-save/issues"
+  },
+  "homepage": "https://github.com/lnardai/ng2-auto-save#readme",
+  "dependencies": {
+    "@angular/common": "^2.4.6",
+    "@angular/compiler": "^2.4.6",
+    "@angular/core": "^2.4.6",
+    "@angular/forms": "^2.4.6",
+    "@angular/http": "^2.4.6",
+    "@angular/platform-browser": "^2.4.6",
+    "@angular/platform-browser-dynamic": "^2.4.6",
+    "@angular/router": "^3.4.6",
+    "angular-in-memory-web-api": "^0.2.4",
+    "angular2-template-loader": "^0.6.2",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.0.3",
+    "ts-helpers": "^1.1.2",
+    "zone.js": "^0.7.5"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.35",
+    "autoprefixer": "^6.6.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "html-webpack-plugin": "^2.26.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.3.0",
+    "postcss-loader": "^1.2.2",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.1.1",
+    "source-map-loader": "^0.1.6",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.5",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
