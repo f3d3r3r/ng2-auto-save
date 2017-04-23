@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import {AutoSaveDirective} from "../services/auto-save.directive";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, AutoSaveDirective
   ],
+  exports: [AutoSaveDirective],
   imports: [
     BrowserModule,
     FormsModule,

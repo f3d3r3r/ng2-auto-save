@@ -3,6 +3,11 @@
 </h1>
 
 <h2>
-  Demo
+  Demo,
 </h2>
-<textarea>Input text here...</textarea>
+<p>This textbox's content should survive until the end of times.</p>
+<textarea rows="10" cols="60"
+          placeholder="{{hint}}"
+          auto-save asdata="{{welcomeText}}"
+          askey="unique-127"
+          [(ngModel)]="textData"></textarea>

@@ -5,15 +5,15 @@ import {Directive, HostListener, Input} from "@angular/core";
     selector: `[auto-save]`
 })
 export class AutoSaveDirective {
-    @Input() key = 'Are you sure you want to do this?';
 
+    @Input() asdata : string;
+    @Input() askey : string;
     constructor(){
 
     }
 
-    @HostListener('document:keyup', ['$event'])
-    keyUpListener(ev:KeyboardEvent) {
-        // do something meaningful with it
-        console.log(`The user just pressed ${ev.key}!`);
+    ngOnChanges(): void {
+        console.log(`'Data input has changed with key: ${this.askey}, ${this.asdata}`);
+        //this data needs to be saved
     }
 }
