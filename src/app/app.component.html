@@ -6,8 +6,7 @@
   Demo,
 </h2>
 <p>This textbox's content should survive until the end of times.</p>
-<textarea rows="10" cols="60"
-          placeholder="{{hint}}"
-          auto-save asdata="{{welcomeText}}"
+<textarea placeholder="{{hint}}"
+          auto-save asdata="{{textData}}"
           askey="unique-127"
           [(ngModel)]="textData"></textarea>
