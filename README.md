@@ -20,7 +20,6 @@ This should survive page reload, browser close, etc...
 <div> 
 <textarea placeholder="{{hint}}"
           auto-save [(asdata)]="textData"
-          ng-model-options="{debounce: 500}"
           (reloadData)="setText($event)"
           askey="unique127"
           [(ngModel)]="textData"></textarea>
@@ -54,3 +53,5 @@ browse to the app: `http://localhost:4200`
 ### Unit test
 
 `ng test`
+
+
