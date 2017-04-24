@@ -16,9 +16,8 @@ export class AutoSaveDirective {
   }
 
   ngAfterViewInit() {
-    this.loadContent();
-    //TODO: this line makes the 'ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked.' disappear, but creates a changeDetectionLoop
-    //this.ref.detectChanges();
+    //TODO: this line makes the 'ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked.', more info https://github.com/angular/angular/issues/6005
+    window.setTimeout(() => {this.loadContent()}, 1);
   }
 
   loadContent() {
@@ -26,7 +25,6 @@ export class AutoSaveDirective {
     console.log("returned item: ", actualItem);
     if (typeof actualItem !== 'undefined') {
       this.reloadData.emit(actualItem);
-      this.asdata = actualItem;
     }
   }
 

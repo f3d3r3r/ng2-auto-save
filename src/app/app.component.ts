@@ -6,11 +6,11 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Fancy demo page for ng2-auto-save';
   hint = 'Enter text here!!!';
   textData = '';
 
-  setText(text : string){
+  setText(text: string) {
     console.log("settext called: ", text)
     this.textData = text;
   }
