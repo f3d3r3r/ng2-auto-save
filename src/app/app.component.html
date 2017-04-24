@@ -7,6 +7,8 @@
 </h2>
 <p>This textbox's content should survive until the end of times.</p>
 <textarea placeholder="{{hint}}"
-          auto-save asdata="{{textData}}"
-          askey="unique-127"
+          auto-save [(asdata)]="textData"
+          ng-model-options="{debounce: 500}"
+          (reloadData)="setText($event)"
+          askey="unique127"
           [(ngModel)]="textData"></textarea>

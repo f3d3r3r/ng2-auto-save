@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {AutoSaveDirective} from "../services/auto-save.directive";
+import {CoolStorageModule} from "angular2-cool-storage";
+import {AutoSaveService} from "../services/auto-save.service";
 
 @NgModule({
   declarations: [
@@ -12,11 +14,12 @@ import {AutoSaveDirective} from "../services/auto-save.directive";
   ],
   exports: [AutoSaveDirective],
   imports: [
+    CoolStorageModule,
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AutoSaveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

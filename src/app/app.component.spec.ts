@@ -3,6 +3,8 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import {AutoSaveDirective} from "../services/auto-save.directive";
+import {AutoSaveService} from "../services/auto-save.service";
+import {CoolStorageModule} from "angular2-cool-storage";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -11,7 +13,8 @@ describe('AppComponent', () => {
         AppComponent,
         AutoSaveDirective
       ],
-      imports:[ FormsModule ]
+      imports:[ FormsModule, CoolStorageModule ],
+      providers: [AutoSaveService]
     }).compileComponents();
   }));
 

@@ -9,4 +9,10 @@ export class AppComponent {
   title = 'app works!';
   hint = 'Enter text here!!!';
   textData = '';
+
+  setText(text : string){
+    console.log("settext called: ", text)
+    this.textData = text;
+  }
+
 }
