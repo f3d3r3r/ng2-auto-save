@@ -11,3 +11,14 @@
           (reloadData)="setText($event)"
           askey="unique127"
           [(ngModel)]="textData"></textarea>
+
+<p>
+  <select auto-save
+          [(asdata)]="selectedColor"
+          askey="unique128"
+          (reloadData)="setColor($event)"
+          [(ngModel)]="selectedColor">
+    <option *ngFor="let color of colors" [ngValue]="color.name">{{color.name}}</option>
+  </select>
+</p>
+
