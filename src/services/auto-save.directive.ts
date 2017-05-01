@@ -1,6 +1,5 @@
-import {ChangeDetectorRef, Directive, EventEmitter, Input, Output} from "@angular/core";
+import {Directive, EventEmitter, Input, Output} from "@angular/core";
 import {AutoSaveService} from "./auto-save.service";
-import _ from "lodash";
 
 @Directive({
   selector: `[auto-save]`
@@ -10,14 +9,18 @@ export class AutoSaveDirective {
   @Input() asdata: string;
   @Input() askey: string;
   @Output() reloadData: EventEmitter<string> = new EventEmitter<string>();
+  private timeout;
 
-  constructor(private ref: ChangeDetectorRef, private autosaveService: AutoSaveService) {
+  constructor(private autosaveService: AutoSaveService) {
     this.autosaveService = autosaveService;
   }
 
   ngAfterViewInit() {
     //TODO: this line makes the 'ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked.', more info https://github.com/angular/angular/issues/6005
-    window.setTimeout(() => {this.loadContent()}, 1);
+    clearTimeout(this.timeout);
+    this.timeout = window.setTimeout(() => {
+      this.loadContent()
+    }, 500);
   }
 
   loadContent() {

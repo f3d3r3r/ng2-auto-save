@@ -1,4 +1,4 @@
-import { Ng2AutoSavePage } from './app.po';
+import {Ng2AutoSavePage} from "./app.po";
 
 describe('ng2-auto-save App', () => {
   let page: Ng2AutoSavePage;

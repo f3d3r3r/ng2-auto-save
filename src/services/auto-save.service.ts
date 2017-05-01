@@ -1,7 +1,5 @@
 import {Injectable} from "@angular/core";
 import {CoolLocalStorage} from "angular2-cool-storage";
-import _ from "lodash";
-import {NgModel} from "@angular/forms";
 
 @Injectable()
 export class AutoSaveService {

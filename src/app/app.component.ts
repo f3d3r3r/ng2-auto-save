@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component} from "@angular/core";
 
 @Component({
   selector: 'app-root',
@@ -10,11 +10,11 @@ export class AppComponent {
   hint = 'Enter text here!!!';
   textData = '';
   colors = [
-    {name:'black', shade:'dark'},
-    {name:'white', shade:'light'},
-    {name:'red', shade:'dark'},
-    {name:'blue', shade:'dark'},
-    {name:'yellow', shade:'light'}
+    {name: 'black', shade: 'dark'},
+    {name: 'white', shade: 'light'},
+    {name: 'red', shade: 'dark'},
+    {name: 'blue', shade: 'dark'},
+    {name: 'yellow', shade: 'light'}
   ];
   selectedColor = "";
 
