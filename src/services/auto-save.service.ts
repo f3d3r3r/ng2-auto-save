@@ -17,14 +17,10 @@ export class AutoSaveService {
       (<any>currentState)[key] = data;
       this.storage.setObject(this.asMasterKey, currentState);
     }
-    console.log(`Actual saving: ${key}, ${data}`);
   }
 
   getFromStorage(key: string) {
     const currentData = this.storage.tryGetObject(this.asMasterKey) || {};
-    console.log('using key: ', key);
-    console.log('returned object from storage: ', currentData);
-    console.log('returned value from storage: ', currentData[key]);
     return currentData[key];
   }
 

@@ -25,14 +25,12 @@ export class AutoSaveDirective {
 
   loadContent() {
     const actualItem = this.autosaveService.getFromStorage(this.askey);
-    console.log("returned item: ", actualItem);
     if (typeof actualItem !== 'undefined') {
       this.reloadData.emit(actualItem);
     }
   }
 
   saveHandler() {
-    console.log(`'Data input has changed with key: ${this.askey}, ${this.asdata}`);
     this.autosaveService.saveToStorage(this.askey, this.asdata);
   }
 

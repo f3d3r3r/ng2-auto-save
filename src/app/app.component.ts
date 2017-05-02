@@ -19,12 +19,10 @@ export class AppComponent {
   selectedColor = "";
 
   setText(text: string) {
-    console.log("setText called: ", text)
     this.textData = text;
   }
 
   setColor(color) {
-    console.log("setColor called: ", color.name)
     this.selectedColor = color;
   }
 
