@@ -10,6 +10,8 @@
 
 # IDEs and editors
 /.idea
+*.iml
+.editorconfig
 .project
 .classpath
 .c9/
