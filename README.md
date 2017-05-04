@@ -10,12 +10,13 @@ if something happens to the current page. The save is triggered on the user keyu
 The user must provide a unique identifier for their content.
 
 Later I'll try to provide a way to configure, so you can save to Session storage,
-if it's sensitive data.
+if it's sensitive data. Also users should have control over what data they want to remove. 
+Now you do this manually by tinkering with LocalStorage.
 
 ### example
 
 
-This should survive page reload, browser close, etc...
+This textbox content should survive page reload, browser close, etc...
 ```
 <div> 
 <textarea placeholder="{{hint}}"
@@ -39,7 +40,10 @@ Parameter description:
 
 ### Demo
 
-You can run the component on your local machine. You'll need nodejs 7.x, angular-cli.
+Live demo of how directive works.
+[https://lnardai.github.io/ng2-auto-save/]
+
+You can also run the component on your local machine. You'll need nodejs 7.x, angular-cli.
 
 to start the demo page:
 
